@@ -1,79 +1,67 @@
 ---
-title: 【每周一个Api】 之 Vue3-createApp
-date: 2024-05-01T13:14:77Z
+title: 【每周一个Api】 之 app.mount()
+date: 2024-05-08T08:15:15Z
 lang: zh
 type: weekend
 duration: 10分钟
 description: 【每周一个Api】 之 Vue3-createApp
 ---
 
+在 Vue 3 中，app.mount() 方法用于将 Vue 应用程序挂载到 DOM 元素上。这是启动 Vue 应用的关键步骤之一。
+
 ### 1. 基本用法
 
-```
-import { createApp } from 'vue';
+```import { createApp } from 'vue';
 import App from './App.vue';
 
 const app = createApp(App);
 app.mount('#app');
 ```
 ### 2. 参数说明
-构造函数的第一个参数 (App): 通常是一个定义了组件选项的对象，也可以是一个返回此对象的函数。
-可选配置对象: 可以通过 .use() 和 .component() 等方法来扩展应用实例的功能。
-### 3. 使用插件和注册全局组件
+选择器字符串 ('#app'): 指定挂载点的 DOM 元素的选择器。
+### 3. 返回值
+app.mount() 方法返回挂载后的根组件实例。
+
+### 4. 挂载到已存在的元素
+如果需要挂载到一个已经存在的 DOM 节点上，可以直接传入该节点。
+
 ```
 import { createApp } from 'vue';
 import App from './App.vue';
-import MyPlugin from './plugins/my-plugin';
 
+const container = document.getElementById('app');
 const app = createApp(App);
-
-// 使用插件
-app.use(MyPlugin);
-
-// 注册全局组件
-app.component('my-component', {
-  // 组件定义
-});
-
-app.mount('#app');
+app.mount(container);
 ```
-### 4. 提供全局状态管理
-可以利用 provide/inject API 来传递数据或服务。
 
+### 5. 挂载多个实例
+可以在同一个页面中挂载多个 Vue 应用实例。
+
+javascript
 ```
-import { createApp, provide } from 'vue';
-import App from './App.vue';
+import { createApp } from 'vue';
+import App1 from './App1.vue';
+import App2 from './App2.vue';
 
-const app = createApp(App);
+const app1 = createApp(App1);
+app1.mount('#app1');
 
-app.provide('myService', {
-  // 服务定义
-});
-
-app.mount('#app');
+const app2 = createApp(App2);
+app2.mount('#app2');
 ```
-### 5. 配合 TypeScript 使用
-当使用 TypeScript 时，可以利用类型定义来增强开发体验。
+### 6. 注意事项
+确保 DOM 已经加载完成：在挂载应用之前，需要确保 DOM 已经完全加载完毕。
+避免重复挂载：对于同一个应用实例，多次调用 mount 方法可能会导致错误。
+### 7. 示例
+下面是一个简单的示例，展示如何使用 app.mount()：
 ```
 import { createApp } from 'vue';
 import App from './App.vue';
 
-const app = createApp(App as any);
-
-app.mount('#app');
-```
-
-### 6. 单元测试支持
-在编写单元测试时，可以通过 createApp 创建一个虚拟的应用实例。
-
-```
-import { createApp } from 'vue';
-import App from './App.vue';
-
-describe('App', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const app = createApp(App);
-  // 测试代码
+  app.mount('#app');
 });
 ```
-## 总结
-createApp 是 Vue 3 中创建和配置应用程序的主要入口点。它简化了 Vue 2 中繁琐的配置过程，使得启动一个新项目变得更加简单直接。
+### 总结
+app.mount() 是 Vue 3 中启动和显示应用程序的关键方法。它负责将 Vue 应用程序挂载到指定的 DOM 节点上，从而让应用程序可见并开始运行。正确地使用 app.mount() 可以帮助开发者轻松地管理和控制 Vue 应用的生命周期。
