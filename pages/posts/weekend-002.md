@@ -11,7 +11,8 @@ description: 【每周一个Api】 之 Vue3 app.mount()
 
 ### 1. 基本用法
 
-```import { createApp } from 'vue';
+```javascript
+import { createApp } from 'vue';
 import App from './App.vue';
 
 const app = createApp(App);
@@ -25,7 +26,7 @@ app.mount() 方法返回挂载后的根组件实例。
 ### 4. 挂载到已存在的元素
 如果需要挂载到一个已经存在的 DOM 节点上，可以直接传入该节点。
 
-```
+``` javascript
 import { createApp } from 'vue';
 import App from './App.vue';
 
@@ -37,8 +38,8 @@ app.mount(container);
 ### 5. 挂载多个实例
 可以在同一个页面中挂载多个 Vue 应用实例。
 
-javascript
-```
+
+``` javascript
 import { createApp } from 'vue';
 import App1 from './App1.vue';
 import App2 from './App2.vue';
