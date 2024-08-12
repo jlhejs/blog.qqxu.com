@@ -6,10 +6,10 @@ import MarkdownIt from 'markdown-it'
 import type { FeedOptions, Item } from 'feed'
 import { Feed } from 'feed'
 
-const DOMAIN = 'http://blog.jlhe.com'
+const DOMAIN = 'http://blog.qqxu.com'
 const AUTHOR = {
   name: 'jlhe',
-  email: 'hi@blog.jlhe.com',
+  email: 'hi@blog.qqxu.com',
   link: DOMAIN,
 }
 const markdown = MarkdownIt({
@@ -28,13 +28,13 @@ async function buildBlogRSS() {
   const options = {
     title: 'jlhe',
     description: 'jlhe\' Blog',
-    id: 'http://blog.jlhe.com/',
-    link: 'http://blog.jlhe.com/',
+    id: 'http://blog.qqxu.com/',
+    link: 'http://blog.qqxu.com/',
     copyright: 'CC BY-NC-SA 4.0 2021 © jlhe',
     feedLinks: {
-      json: 'http://blog.jlhe.com/feed.json',
-      atom: 'http://blog.jlhe.com/feed.atom',
-      rss: 'http://blog.jlhe.com/feed.xml',
+      json: 'http://blog.qqxu.com/feed.json',
+      atom: 'http://blog.qqxu.com/feed.atom',
+      rss: 'http://blog.qqxu.com/feed.xml',
     },
   }
   const posts: any[] = (
@@ -71,8 +71,8 @@ async function buildBlogRSS() {
 
 async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
   options.author = AUTHOR
-  options.image = 'http://blog.jlhe.com/avatar.png'
-  options.favicon = 'http://blog.jlhe.com/logo.png'
+  options.image = 'http://blog.qqxu.com/avatar.png'
+  options.favicon = 'http://blog.qqxu.com/logo.png'
 
   const feed = new Feed(options)
 

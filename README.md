@@ -1,4 +1,4 @@
-**[blog.jlhe.com](http://blog.jlhe.com)**
+**[blog.qqxu.com](http://blog.qqxu.com)**
 
 my personal website powered by [Vite](https://vitejs.dev/)
 

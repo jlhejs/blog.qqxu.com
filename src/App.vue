@@ -2,7 +2,7 @@
 useHead({
   meta: [
     { property: 'og:title', content: 'jlhe' },
-    { property: 'og:image', content: 'http://blog.jlhe.com/og-icon.png' },
+    { property: 'og:image', content: 'http://blog.qqxu.com/og-icon.png' },
     { name: 'description', content: 'jlhe\'s Portfolio' },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:creator', content: '@jlhe' },

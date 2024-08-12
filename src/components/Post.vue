@@ -12,7 +12,7 @@ const router = useRouter()
 const route = useRoute()
 const content = ref<HTMLDivElement>()
 
-const base = 'http://blog.jlhe.com'
+const base = 'http://blog.qqxu.com'
 const tweetUrl = computed(() => `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Reading @jlhe\'s ${base}${route.path}\n\nI think...`)}`)
 
 onMounted(() => {

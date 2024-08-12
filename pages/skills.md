@@ -229,13 +229,13 @@ projects:
 
   Games:
     - name: 'Handle 汉兜'
-      link: 'https://handle.blog.jlhe.com'
+      link: 'https://handle.blog.qqxu.com'
       desc: 'A Chinese Hanzi variation of Wordle'
       icon: 'i-carbon-scatter-matrix'
 
   Design / Compform:
     - name: '100 Day'
-      link: 'https://100.blog.jlhe.com/'
+      link: 'https://100.blog.qqxu.com/'
       desc: 'My 100 day challenge of exploring design, compform, and new things.'
       icon: 'i-carbon-app-switcher'
     - name: 'Codecember'
@@ -261,7 +261,7 @@ projects:
       desc: 'A customizable Prism.js theme using CSS variables'
       icon: 'i-carbon-angle'
     - name: 'ReX'
-      link: 'https://rex.blog.jlhe.com/'
+      link: 'https://rex.blog.qqxu.com/'
       desc: 'Transform texts with RegExp like a Pro'
       icon: 'i-carbon-text-align-mixed'
     - name: 'Foto Rehearser'
@@ -281,7 +281,7 @@ projects:
       desc: 'Group bills split made easy, fast and customizable'
       icon: 'i-carbon-share-knowledge'
     - name: 'BCP-47 tester'
-      link: 'https://bcp47.blog.jlhe.com/'
+      link: 'https://bcp47.blog.qqxu.com/'
       desc: 'Online BCP-47 Tester & Normalizer'
       icon: 'i-carbon-earth-southeast-asia'
 
