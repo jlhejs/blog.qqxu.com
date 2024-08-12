@@ -1,6 +1,6 @@
 ---
 title: 【每周一更】 之 Vue3 app.defineAsyncComponent()
-date: 2024-06-30 08:15:15
+date: 2024-07-03 08:15:15
 lang: zh
 type: weekend
 duration: 10分钟
