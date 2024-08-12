@@ -1,10 +1,10 @@
 ---
-title: 【每周一个Api】 之 Vue3 app.unmount()
-date: 2024-05-13 08:15:15
+title: 【每周一更】 之 Vue3 app.unmount()
+date: 2024-05-15 08:15:15
 lang: zh
 type: weekend
 duration: 10分钟
-description: 【每周一个Api】 之 Vue3 app.unmount()
+description: 【每周一更】 之 Vue3 app.unmount()
 ---
 在 Vue 3 中，app.unmount() 方法用于卸载已挂载的 Vue 应用程序。这对于动态管理应用实例非常有用，尤其是在需要重新渲染或切换不同应用实例的情况下。
 

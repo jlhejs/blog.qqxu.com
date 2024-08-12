@@ -1,10 +1,10 @@
 ---
-title: 【每周一个Api】 之 Vue3 app.mount()
+title: 【每周一更】 之 Vue3 app.mount()
 date: 2024-05-08T08:15:15Z
 lang: zh
 type: weekend
 duration: 10分钟
-description: 【每周一个Api】 之 Vue3 app.mount()
+description: 【每周一更】 之 Vue3 app.mount()
 ---
 
 在 Vue 3 中，app.mount() 方法用于将 Vue 应用程序挂载到 DOM 元素上。这是启动 Vue 应用的关键步骤之一。

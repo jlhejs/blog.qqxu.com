@@ -1,10 +1,10 @@
 ---
-title: 【每周一个Api】 之 Vue3 createApp
+title: 【每周一更】 之 Vue3 createApp
 date: 2024-05-01T13:14:77Z
 lang: zh
 type: weekend
 duration: 10分钟
-description: 【每周一个Api】 之 Vue3 createApp
+description: 【每周一更】 之 Vue3 createApp
 ---
 
 ### 1. 基本用法
