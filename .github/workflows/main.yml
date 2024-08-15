@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest # 使用ubuntu系统镜像运行自动化脚本
     steps: # 进入自动化步骤
       # 第一步，下载代码仓库
-      - name: Checkout
+      - name: 第一步 下载代码仓库
         uses: actions/checkout@master
 
       # 第二步 打包构建
-      - name: Build
+      - name: 第二步 打包构建
         uses: actions/setup-node@master
         with:
           node-version: '18'
@@ -29,14 +29,17 @@ jobs:
       #      # pm2 帮助我们在 Node服务器，启动项目的一个工具，具体可查看官网 https://github.com/Unitech/pm2
       - run: tar -zcvf release.tgz dist
       # 发布版本 Release
-      # 与 Github 建立连接( 此处用于将 release.tgz 上传到 github 上 )
-      - name: 读取当前版本号
+
+      # 第三步获取到的版本号，
+      - name: 第三步 获取到的版本号，
         id: version
         uses: ashley-taylor/read-json-property-action@v1.0
         with:
           path: ./package.json
           property: version
-      - name: Create Release
+
+      #  第四步，创建发布版本
+      - name: 第四步 创建发布版本
         id: create_release
         uses: actions/create-release@master
         env:
@@ -49,7 +52,7 @@ jobs:
 
       # 上传构建结果到 Release
       #        # 将 release.tgz 上传到 github 上
-      - name: Upload Release Asset
+      - name: 第五步 上传构建结果到 Release
         id: upload-release-asset
         uses: actions/upload-release-asset@master
         env:
@@ -61,7 +64,7 @@ jobs:
           asset_content_type: application/x-tgz
 
       # 部署到服务器
-      - name: Deploy
+      - name: 第六步 部署到服务器
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }} # 公网 IP 或 域名
