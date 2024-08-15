@@ -77,4 +77,4 @@ jobs:
           # 6. pm2.config.json 是 启动 项目，( npm start )
           script: |
             cd /opt/blog
-            wget https://github.com/jlhejs/blog.qqxu.com/releases/latest/download/release.tgz -O release.tgz
+            wget https://github.com/jlhejs/blog.qqxu.com/releases/download/v${{steps.version.outputs.value}}/release.tgz -O release.tgz
