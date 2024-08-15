@@ -21,7 +21,8 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: '18'
-      - run: npm install
+      - run: npm install cnpm -g
+      - run: cnpm install
       - run: npm run build
       # 将这些 .nuxt static nuxt.config.js package.json package-lock.json pm2.config.json 文件打包在 release.tgz 中
       #      # 此处是为了在方便，在服务器中直接解压，获得所有文件，无需单独传
