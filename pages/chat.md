@@ -1,7 +1,7 @@
 ---
 title: Let's Chat - Anthony Fu
 display: Let's Chat!
-image: https://antfu.me/og-chat.png
+image: https://qqxu.com/og-chat.png
 art: dots
 ---
 

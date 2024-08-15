@@ -17,19 +17,19 @@ const route = useRoute()
 
     <div mb-0 flex="~ col gap-1 sm:row sm:gap-3 wrap" text-3xl>
       <RouterLink to="/posts" class="!border-none" :class="route.path === '/posts' ? activeStyle : inactiveStyle">
-        Blog
+        博客
       </RouterLink>
       <RouterLink to="/talks" class="!border-none" :class="route.path === '/talks' ? activeStyle : inactiveStyle">
-        Talks
+        会议
       </RouterLink>
       <RouterLink to="/podcasts" class="!border-none" :class="route.path === '/podcasts' ? activeStyle : inactiveStyle">
-        Podcasts
+        播客
       </RouterLink>
       <RouterLink to="/streams" class="!border-none" :class="route.path === '/streams' ? activeStyle : inactiveStyle">
-        Streams
+        团队
       </RouterLink>
       <RouterLink to="/notes" class="!border-none" :class="route.path === '/notes' ? activeStyle : inactiveStyle">
-        Notes
+        日记
       </RouterLink>
     </div>
   </div>

@@ -1,4 +1,4 @@
-**[antfu.me](https://antfu.me)**
+**[antfu.me](https://qqxu.com)**
 
 my personal website
 

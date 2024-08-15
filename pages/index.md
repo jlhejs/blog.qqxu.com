@@ -1,7 +1,7 @@
 ---
 title: Sunny
 description: Sunny's Blog
-image: https://antfu.me/og.png
+image: https://qqxu.com/og.png
 art: random
 ---
 
