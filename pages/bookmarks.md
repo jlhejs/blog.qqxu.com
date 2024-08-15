@@ -4,7 +4,7 @@ display: 小工具
 subtitle: 我强烈推荐一些我最喜欢的设计和用户体验出色的网站/工具
 ---
 
-### 可视化
+### 可视化 
 
 - [阿里云 Datav](https://datav.aliyun.com/) - 用可视化应用的方式来分析并展示庞杂数据的阿里云产品
 - [AntV](https://antv.vision/) - 蚂蚁集团数据可视化团队
