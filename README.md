@@ -1,6 +1,6 @@
-**[blog.qqxu.com](http://blog.qqxu.com)**
+**[antfu.me](https://antfu.me)**
 
-my personal website powered by [Vite](https://vitejs.dev/)
+my personal website
 
 <br>
 

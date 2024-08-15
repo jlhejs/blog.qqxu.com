@@ -1,4 +1,4 @@
-import { dirname } from 'path'
+import { dirname } from 'node:path'
 import fg from 'fast-glob'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
@@ -6,10 +6,10 @@ import MarkdownIt from 'markdown-it'
 import type { FeedOptions, Item } from 'feed'
 import { Feed } from 'feed'
 
-const DOMAIN = 'http://blog.qqxu.com'
+const DOMAIN = 'https://antfu.me'
 const AUTHOR = {
-  name: 'jlhe',
-  email: 'hi@blog.qqxu.com',
+  name: 'Anthony Fu',
+  email: 'hi@antfu.me',
   link: DOMAIN,
 }
 const markdown = MarkdownIt({
@@ -26,15 +26,15 @@ async function buildBlogRSS() {
   const files = await fg('pages/posts/*.md')
 
   const options = {
-    title: 'jlhe',
-    description: 'jlhe\' Blog',
-    id: 'http://blog.qqxu.com/',
-    link: 'http://blog.qqxu.com/',
-    copyright: 'CC BY-NC-SA 4.0 2021 © jlhe',
+    title: 'Anthony Fu',
+    description: 'Anthony Fu\' Blog',
+    id: 'https://antfu.me/',
+    link: 'https://antfu.me/',
+    copyright: 'CC BY-NC-SA 4.0 2021 © Anthony Fu',
     feedLinks: {
-      json: 'http://blog.qqxu.com/feed.json',
-      atom: 'http://blog.qqxu.com/feed.atom',
-      rss: 'http://blog.qqxu.com/feed.xml',
+      json: 'https://antfu.me/feed.json',
+      atom: 'https://antfu.me/feed.atom',
+      rss: 'https://antfu.me/feed.xml',
     },
   }
   const posts: any[] = (
@@ -71,8 +71,8 @@ async function buildBlogRSS() {
 
 async function writeFeed(name: string, options: FeedOptions, items: Item[]) {
   options.author = AUTHOR
-  options.image = 'http://blog.qqxu.com/avatar.png'
-  options.favicon = 'http://blog.qqxu.com/logo.png'
+  options.image = 'https://antfu.me/avatar.png'
+  options.favicon = 'https://antfu.me/logo.png'
 
   const feed = new Feed(options)
 

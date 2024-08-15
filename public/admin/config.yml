@@ -4,11 +4,11 @@ backend:
 media_folder: content/images
 public_folder: /images
 collections:
-  - name: blog
-    label: Blog
-    folder: content/blog
+  - name: posts
+    label: Posts
+    folder: content/posts
     create: true
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     fields:
       - {label: Title, name: title, widget: string}
       - {label: Description, name: description, widget: text, required: false}

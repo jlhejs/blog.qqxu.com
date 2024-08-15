@@ -1,63 +1,69 @@
 <script setup lang="ts">
-import { isDark } from '~/logics'
+function toTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+}
+
+const { y: scroll } = useWindowScroll()
 </script>
 
 <template>
   <header class="header z-40">
-    <router-link
-      class="w-10 h-10 absolute lg:fixed m-6 select-none outline-none"
+    <RouterLink
+      class="w-12 h-12 absolute xl:fixed m-5 select-none outline-none"
       to="/"
       focusable="false"
     >
-      <img v-show="isDark" src="/logo-dark.svg?url" alt="logo">
-      <img v-show="!isDark" src="/logo.svg?url" alt="logo">
-    </router-link>
+      <Logo />
+    </RouterLink>
+    <button
+      title="Scroll to top"
+      fixed right-3 bottom-3 w-10 h-10 hover:op100 rounded-full
+      hover-bg-hex-8883 transition duration-300 z-100 print:hidden
+      :class="scroll > 300 ? 'op30' : 'op0! pointer-events-none'"
+      @click="toTop()"
+    >
+      <div i-ri-arrow-up-line />
+    </button>
     <nav class="nav">
       <div class="spacer" />
-      <div class="right">
-        <router-link to="/blog" title="Blog">
-          <span class="lt-md:hidden">博客</span>
+      <div class="right" print:op0>
+        <RouterLink to="/posts" title="Blog">
+          <span class="lt-md:hidden">Blog</span>
           <div i-ri-article-line md:hidden />
-        </router-link>
-        <router-link to="/web" class="lt-md:hidden" title="Web">
-          前端技术
-        </router-link>
-        <router-link to="/weekend" class="lt-md:hidden" title="每周一更">
-          每周一更
-        </router-link>
-        <router-link to="/life" class="lt-md:hidden" title="视频">
-          生活
-        </router-link>
-        <router-link to="/plan" class="lt-md:hidden" title="计划">
-          计划
-        </router-link>
-        <router-link to="/skills" title="技能">
-          <span class="lt-md:hidden">技能</span>
+        </RouterLink>
+        <RouterLink to="/projects" title="Projects">
+          <span class="lt-md:hidden">Projects</span>
           <div i-ri-lightbulb-line class="md:hidden" />
-        </router-link>
-        <router-link to="/material" title="书籍资料">
-          <span class="lt-md:hidden">书籍资料</span>
-          <div i-ri-screenshot-line class="md:hidden" />
-        </router-link>
-        <router-link to="/bookmarks" title="书签" class="lt-md:hidden">
-          <div i-ri-bookmark-line />
-        </router-link>
-        <!-- <router-link to="/notes" title="Notes">
-          <div i-ri-sticky-note-line />
-        </router-link> -->
-        <a href="https://space.bilibili.com/1498400781" target="_blank" title="bilibili" class="lt-md:hidden">
-          <div i-ri:bilibili-line />
+        </RouterLink>
+        <RouterLink to="/talks" class="lt-md:hidden" title="Talks">
+          Talks
+        </RouterLink>
+        <RouterLink to="/sponsors-list" title="Sponsors">
+          <span class="lt-md:hidden">Sponsors</span>
+          <div i-ri-heart-line class="md:hidden" />
+        </RouterLink>
+        <RouterLink to="/podcasts" class="lt-md:hidden" title="Podcasts">
+          <div i-ri-mic-line />
+        </RouterLink>
+        <RouterLink to="/demos" title="Demos">
+          <div i-ri-screenshot-line />
+        </RouterLink>
+        <RouterLink to="/chat" title="Let's Chat">
+          <div i-ri-chat-1-line />
+        </RouterLink>
+        <a href="https://twitter.com/antfu7" target="_blank" title="Twitter" class="lt-md:hidden">
+          <div i-ri-twitter-x-fill />
         </a>
-        <a href="https://weibo.com/u/2391299105" target="_blank" title="WeiBo" class="lt-md:hidden">
-          <ri:weibo-line />
-        </a>
-        <a href="https://github.com/jlhejs" target="_blank" title="GitHub" class="lt-md:hidden">
+        <a href="https://github.com/antfu" target="_blank" title="GitHub" class="lt-md:hidden">
           <div i-uil-github-alt />
         </a>
         <a href="/feed.xml" target="_blank" title="RSS" class="lt-md:hidden">
           <div i-la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
         </a>
-        <toggle-theme />
+        <ToggleTheme />
       </div>
     </nav>
   </header>

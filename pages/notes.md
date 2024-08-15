@@ -1,8 +1,9 @@
 ---
-title: Notes - Sunny
-display: Notes
-subtitle: Quick notes / tips
-description: Quick notes / tips
+title: Notes - Anthony Fu
+art: plum
+display: ''
 ---
 
-This page has been moved to [/blog](/blog).
+<SubNav />
+
+<ListPosts only-date type="note" />
