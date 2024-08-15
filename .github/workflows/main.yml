@@ -21,6 +21,7 @@
        uses: actions/setup-node@master
        with:
            node-version: '14'
+     - run: npm install rimraf -g
      - run: npm install
      - run: npm run build
      # 将这些 .nuxt static nuxt.config.js package.json package-lock.json pm2.config.json 文件打包在 release.tgz 中
